@@ -1,0 +1,24 @@
+# Python byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Audio Datasets (Large binary archives & raw audio)
+PROXIMA_DATASET/
+PROXIMA_DATA_1/
+PROXIMA_DATA_1_SPLIT/
+PROXIMA_FEATURES_1/
+*.zip
+*.tar.gz
+
+# IDE & OS temporary files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

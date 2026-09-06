@@ -1,0 +1,28 @@
+================================================================================
+PROXIMA KWS MODEL TEST SET EVALUATION REPORT
+================================================================================
+
+Evaluation conducted strictly on the independent TEST partition (109 recordings).
+
+--- INT8 TFLite Model (Hardware Deployment Target) ---
+  Test Accuracy:                90.83%
+  Precision (PROXIMA):          90.14%
+  Recall (PROXIMA):             95.52%
+  F1 Score:                     92.75%
+  PROXIMA False-Negative Rate:  4.48% (Missed keywords: 3 / 67)
+  UNKNOWN False-Positive Rate:  16.67% (False alarms: 7 / 42)
+
+  Confusion Matrix:
+                   Predicted UNKNOWN    Predicted PROXIMA
+  True UNKNOWN:            35                    7
+  True PROXIMA:             3                   64
+
+--- FLOAT32 Keras Model (Baseline) ---
+  Test Accuracy:                90.83%
+  Precision (PROXIMA):          90.14%
+  Recall (PROXIMA):             95.52%
+  F1 Score:                     92.75%
+
+--- Quantization Impact ---
+  Float32 -> INT8 Accuracy Delta: +0.00%
+  Float32 -> INT8 F1 Delta:       +0.00%
