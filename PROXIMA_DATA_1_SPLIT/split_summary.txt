@@ -1,0 +1,230 @@
+================================================================================
+PROXIMA_DATA_1_SPLIT DATASET SPLIT SUMMARY
+================================================================================
+
+Random Seed:                   42
+Total number of speakers:      20
+Total recordings:              544
+Total train recordings:        435
+Total test recordings:         109
+Train percentage:              79.96%
+Test percentage:               20.04%
+
+================================================================================
+SPEAKER x CLASS BREAKDOWN
+================================================================================
+
+SPK001
+    proxima:
+        total: 31
+        train: 25
+        test: 6
+    unknown:
+        total: 50
+        train: 40
+        test: 10
+
+SPK002
+    proxima:
+        total: 40
+        train: 32
+        test: 8
+    unknown:
+        total: 50
+        train: 40
+        test: 10
+
+SPK003
+    proxima:
+        total: 40
+        train: 32
+        test: 8
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK004
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK005
+    proxima:
+        total: 100
+        train: 80
+        test: 20
+    unknown:
+        total: 40
+        train: 32
+        test: 8
+
+SPK006
+    proxima:
+        total: 40
+        train: 32
+        test: 8
+    unknown:
+        total: 70
+        train: 56
+        test: 14
+
+SPK007
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK008
+    proxima:
+        total: 40
+        train: 32
+        test: 8
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK009
+    proxima:
+        total: 43
+        train: 34
+        test: 9
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK010
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK011
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK012
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK013
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK014
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK015
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK016
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK017
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK018
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK019
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+SPK020
+    proxima:
+        total: 0
+        train: 0
+        test: 0
+    unknown:
+        total: 0
+        train: 0
+        test: 0
+
+================================================================================
+OVERALL CLASS TOTALS
+================================================================================
+
+proxima:
+    total: 334
+    train: 267 (79.94%)
+    test:  67 (20.06%)
+
+unknown:
+    total: 210
+    train: 168 (80.00%)
+    test:  42 (20.00%)
+

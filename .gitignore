@@ -11,7 +11,6 @@ venv/
 # Audio Datasets (Large binary archives & raw audio)
 PROXIMA_DATASET/
 PROXIMA_DATA_1/
-PROXIMA_DATA_1_SPLIT/
 PROXIMA_FEATURES_1/
 *.zip
 *.tar.gz

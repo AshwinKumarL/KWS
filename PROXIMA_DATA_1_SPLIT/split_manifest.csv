@@ -1,0 +1,545 @@
+filename,original_path,split,speaker,class
+2026-09-05_170632936.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170632936.wav,train,SPK001,proxima
+2026-09-05_170511230.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170511230.wav,train,SPK001,proxima
+2026-09-05_170410928.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170410928.wav,train,SPK001,proxima
+2026-09-05_170710325.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170710325.wav,train,SPK001,proxima
+2026-09-05_170800447.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170800447.wav,train,SPK001,proxima
+2026-09-05_170308942.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170308942.wav,train,SPK001,proxima
+2026-09-05_170303448.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170303448.wav,train,SPK001,proxima
+2026-09-05_170431419.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170431419.wav,train,SPK001,proxima
+2026-09-05_170425586.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170425586.wav,train,SPK001,proxima
+2026-09-05_170527575.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170527575.wav,train,SPK001,proxima
+2026-09-05_170400350.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170400350.wav,train,SPK001,proxima
+2026-09-05_170725488.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170725488.wav,train,SPK001,proxima
+2026-09-05_170905329.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170905329.wav,train,SPK001,proxima
+2026-09-05_170703414.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170703414.wav,train,SPK001,proxima
+2026-09-05_170609444.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170609444.wav,train,SPK001,proxima
+2026-09-05_170836115.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170836115.wav,train,SPK001,proxima
+2026-09-05_170206538.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170206538.wav,train,SPK001,proxima
+2026-09-05_170456641.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170456641.wav,train,SPK001,proxima
+2026-09-05_170624901.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170624901.wav,train,SPK001,proxima
+2026-09-05_170218048.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170218048.wav,train,SPK001,proxima
+2026-09-05_170618965.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170618965.wav,train,SPK001,proxima
+2026-09-05_170642425.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170642425.wav,train,SPK001,proxima
+2026-09-05_170901630.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170901630.wav,train,SPK001,proxima
+2026-09-05_170258320.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170258320.wav,train,SPK001,proxima
+2026-09-05_170715924.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170715924.wav,train,SPK001,proxima
+2026-09-05_170316488.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170316488.wav,test,SPK001,proxima
+2026-09-05_170354227.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170354227.wav,test,SPK001,proxima
+2026-09-05_170707113.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170707113.wav,test,SPK001,proxima
+2026-09-05_165834652.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_165834652.wav,test,SPK001,proxima
+2026-09-05_170234702.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170234702.wav,test,SPK001,proxima
+2026-09-05_170636423.wav,PROXIMA_DATA_1/SPK001/proxima/2026-09-05_170636423.wav,test,SPK001,proxima
+2026-09-05_202310372.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202310372.wav,train,SPK001,unknown
+2026-09-05_202416173.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202416173.wav,train,SPK001,unknown
+2026-09-05_202141760.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202141760.wav,train,SPK001,unknown
+2026-09-05_202301580.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202301580.wav,train,SPK001,unknown
+2026-09-05_202400811.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202400811.wav,train,SPK001,unknown
+2026-09-05_202319060.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202319060.wav,train,SPK001,unknown
+2026-09-05_202420840.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202420840.wav,train,SPK001,unknown
+2026-09-05_202206197.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202206197.wav,train,SPK001,unknown
+2026-09-05_202336847.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202336847.wav,train,SPK001,unknown
+2026-09-05_202332780.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202332780.wav,train,SPK001,unknown
+2026-09-05_202258636.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202258636.wav,train,SPK001,unknown
+2026-09-05_202358398.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202358398.wav,train,SPK001,unknown
+2026-09-05_202306970.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202306970.wav,train,SPK001,unknown
+2026-09-05_202124703.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202124703.wav,train,SPK001,unknown
+2026-09-05_202241656.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202241656.wav,train,SPK001,unknown
+2026-09-05_202138670.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202138670.wav,train,SPK001,unknown
+2026-09-05_202115151.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202115151.wav,train,SPK001,unknown
+2026-09-05_202239056.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202239056.wav,train,SPK001,unknown
+2026-09-05_202315694.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202315694.wav,train,SPK001,unknown
+2026-09-05_202215193.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202215193.wav,train,SPK001,unknown
+2026-09-05_202155050.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202155050.wav,train,SPK001,unknown
+2026-09-05_202217760.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202217760.wav,train,SPK001,unknown
+2026-09-05_202223904.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202223904.wav,train,SPK001,unknown
+2026-09-05_202339858.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202339858.wav,train,SPK001,unknown
+2026-09-05_202249758.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202249758.wav,train,SPK001,unknown
+2026-09-05_202304226.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202304226.wav,train,SPK001,unknown
+2026-09-05_202158006.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202158006.wav,train,SPK001,unknown
+2026-09-05_202121725.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202121725.wav,train,SPK001,unknown
+2026-09-05_202349337.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202349337.wav,train,SPK001,unknown
+2026-09-05_202203552.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202203552.wav,train,SPK001,unknown
+2026-09-05_202233244.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202233244.wav,train,SPK001,unknown
+2026-09-05_202118673.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202118673.wav,train,SPK001,unknown
+2026-09-05_202209647.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202209647.wav,train,SPK001,unknown
+2026-09-05_202312971.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202312971.wav,train,SPK001,unknown
+2026-09-05_202230122.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202230122.wav,train,SPK001,unknown
+2026-09-05_202330079.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202330079.wav,train,SPK001,unknown
+2026-09-05_202235856.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202235856.wav,train,SPK001,unknown
+2026-09-05_202130477.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202130477.wav,train,SPK001,unknown
+2026-09-05_202134204.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202134204.wav,train,SPK001,unknown
+2026-09-05_202352128.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202352128.wav,train,SPK001,unknown
+2026-09-05_202200807.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202200807.wav,test,SPK001,unknown
+2026-09-05_202145701.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202145701.wav,test,SPK001,unknown
+2026-09-05_202418462.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202418462.wav,test,SPK001,unknown
+2026-09-05_202227022.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202227022.wav,test,SPK001,unknown
+2026-09-05_202247246.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202247246.wav,test,SPK001,unknown
+2026-09-05_202355688.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202355688.wav,test,SPK001,unknown
+2026-09-05_202151360.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202151360.wav,test,SPK001,unknown
+2026-09-05_202110986.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202110986.wav,test,SPK001,unknown
+2026-09-05_202212391.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202212391.wav,test,SPK001,unknown
+2026-09-05_202321939.wav,PROXIMA_DATA_1/SPK001/unknown/2026-09-05_202321939.wav,test,SPK001,unknown
+05-09-2026 10.48.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.48.wav,train,SPK002,proxima
+05-09-2026 10.51(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.51(2).wav,train,SPK002,proxima
+05-09-2026 10.54(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.54(3).wav,train,SPK002,proxima
+05-09-2026 10.55(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.55(2).wav,train,SPK002,proxima
+05-09-2026 10.52.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.52.wav,train,SPK002,proxima
+05-09-2026 10.53(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.53(3).wav,train,SPK002,proxima
+05-09-2026 10.58.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.58.wav,train,SPK002,proxima
+05-09-2026 11.02.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.02.wav,train,SPK002,proxima
+05-09-2026 10.59.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.59.wav,train,SPK002,proxima
+05-09-2026 10.55(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.55(3).wav,train,SPK002,proxima
+05-09-2026 10.54(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.54(2).wav,train,SPK002,proxima
+05-09-2026 10.54(5).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.54(5).wav,train,SPK002,proxima
+05-09-2026 11.00(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.00(2).wav,train,SPK002,proxima
+05-09-2026 11.01.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.01.wav,train,SPK002,proxima
+05-09-2026 10.50(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.50(2).wav,train,SPK002,proxima
+05-09-2026 11.00(4).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.00(4).wav,train,SPK002,proxima
+05-09-2026 10.51(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.51(3).wav,train,SPK002,proxima
+05-09-2026 10.49.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.49.wav,train,SPK002,proxima
+05-09-2026 10.52(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.52(2).wav,train,SPK002,proxima
+05-09-2026 10.53.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.53.wav,train,SPK002,proxima
+05-09-2026 11.01(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.01(2).wav,train,SPK002,proxima
+05-09-2026 10.58(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.58(3).wav,train,SPK002,proxima
+05-09-2026 10.59(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.59(2).wav,train,SPK002,proxima
+05-09-2026 10.49(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.49(2).wav,train,SPK002,proxima
+05-09-2026 11.02(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.02(2).wav,train,SPK002,proxima
+05-09-2026 10.55.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.55.wav,train,SPK002,proxima
+05-09-2026 10.51.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.51.wav,train,SPK002,proxima
+05-09-2026 11.00.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.00.wav,train,SPK002,proxima
+05-09-2026 10.58(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.58(2).wav,train,SPK002,proxima
+05-09-2026 10.55(4).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.55(4).wav,train,SPK002,proxima
+05-09-2026 11.01(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.01(3).wav,train,SPK002,proxima
+05-09-2026 11.03.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.03.wav,train,SPK002,proxima
+05-09-2026 10.58(4).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.58(4).wav,test,SPK002,proxima
+05-09-2026 11.00(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.00(3).wav,test,SPK002,proxima
+05-09-2026 11.02(3).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.02(3).wav,test,SPK002,proxima
+05-09-2026 10.54(4).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.54(4).wav,test,SPK002,proxima
+05-09-2026 11.01(4).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 11.01(4).wav,test,SPK002,proxima
+05-09-2026 10.53(2).wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.53(2).wav,test,SPK002,proxima
+05-09-2026 10.50.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.50.wav,test,SPK002,proxima
+05-09-2026 10.54.wav,PROXIMA_DATA_1/SPK002/proxima/05-09-2026 10.54.wav,test,SPK002,proxima
+05-09-2026 17.01.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.01.wav,train,SPK002,unknown
+05-09-2026 17.00(9).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(9).wav,train,SPK002,unknown
+05-09-2026 16.58(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.58(2).wav,train,SPK002,unknown
+05-09-2026 17.02(5).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02(5).wav,train,SPK002,unknown
+05-09-2026 16.56(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.56(3).wav,train,SPK002,unknown
+05-09-2026 16.58(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.58(3).wav,train,SPK002,unknown
+05-09-2026 16.59(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.59(2).wav,train,SPK002,unknown
+05-09-2026 17.03.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.03.wav,train,SPK002,unknown
+05-09-2026 16.56.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.56.wav,train,SPK002,unknown
+05-09-2026 17.01(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.01(3).wav,train,SPK002,unknown
+05-09-2026 16.55(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.55(2).wav,train,SPK002,unknown
+05-09-2026 17.00(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(2).wav,train,SPK002,unknown
+05-09-2026 16.55(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.55(3).wav,train,SPK002,unknown
+05-09-2026 16.57(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.57(2).wav,train,SPK002,unknown
+05-09-2026 16.57(5).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.57(5).wav,train,SPK002,unknown
+05-09-2026 17.02.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02.wav,train,SPK002,unknown
+05-09-2026 17.02(4).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02(4).wav,train,SPK002,unknown
+05-09-2026 17.02(7).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02(7).wav,train,SPK002,unknown
+05-09-2026 17.02(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02(3).wav,train,SPK002,unknown
+05-09-2026 16.57(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.57(3).wav,train,SPK002,unknown
+05-09-2026 17.01(6).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.01(6).wav,train,SPK002,unknown
+05-09-2026 17.00(4).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(4).wav,train,SPK002,unknown
+05-09-2026 17.01(5).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.01(5).wav,train,SPK002,unknown
+05-09-2026 16.58(4).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.58(4).wav,train,SPK002,unknown
+05-09-2026 17.02(6).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02(6).wav,train,SPK002,unknown
+05-09-2026 17.00.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00.wav,train,SPK002,unknown
+05-09-2026 16.57.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.57.wav,train,SPK002,unknown
+05-09-2026 17.00(6).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(6).wav,train,SPK002,unknown
+05-09-2026 17.02(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02(2).wav,train,SPK002,unknown
+05-09-2026 17.02(8).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.02(8).wav,train,SPK002,unknown
+05-09-2026 16.58.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.58.wav,train,SPK002,unknown
+05-09-2026 16.54.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.54.wav,train,SPK002,unknown
+05-09-2026 16.57(6).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.57(6).wav,train,SPK002,unknown
+05-09-2026 17.00(5).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(5).wav,train,SPK002,unknown
+05-09-2026 17.01(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.01(2).wav,train,SPK002,unknown
+05-09-2026 16.59.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.59.wav,train,SPK002,unknown
+05-09-2026 16.55.wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.55.wav,train,SPK002,unknown
+05-09-2026 17.00(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(3).wav,train,SPK002,unknown
+05-09-2026 16.56(7).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.56(7).wav,train,SPK002,unknown
+05-09-2026 16.56(6).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.56(6).wav,train,SPK002,unknown
+05-09-2026 16.56(4).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.56(4).wav,test,SPK002,unknown
+05-09-2026 16.55(4).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.55(4).wav,test,SPK002,unknown
+05-09-2026 16.56(2).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.56(2).wav,test,SPK002,unknown
+05-09-2026 17.00(7).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(7).wav,test,SPK002,unknown
+05-09-2026 17.00(8).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(8).wav,test,SPK002,unknown
+05-09-2026 16.56(5).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.56(5).wav,test,SPK002,unknown
+05-09-2026 16.57(4).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.57(4).wav,test,SPK002,unknown
+05-09-2026 16.59(3).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 16.59(3).wav,test,SPK002,unknown
+05-09-2026 17.00(10).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.00(10).wav,test,SPK002,unknown
+05-09-2026 17.01(4).wav,PROXIMA_DATA_1/SPK002/unknown/05-09-2026 17.01(4).wav,test,SPK002,unknown
+New recording 8.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 8.wav,train,SPK003,proxima
+New recording 34.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 34.wav,train,SPK003,proxima
+New recording 7.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 7.wav,train,SPK003,proxima
+New recording 1.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 1.wav,train,SPK003,proxima
+New recording 28.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 28.wav,train,SPK003,proxima
+New recording 18.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 18.wav,train,SPK003,proxima
+New recording 19.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 19.wav,train,SPK003,proxima
+New recording 26.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 26.wav,train,SPK003,proxima
+New recording 15.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 15.wav,train,SPK003,proxima
+New recording 3.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 3.wav,train,SPK003,proxima
+New recording 22.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 22.wav,train,SPK003,proxima
+New recording 2.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 2.wav,train,SPK003,proxima
+New recording 20.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 20.wav,train,SPK003,proxima
+New recording 5.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 5.wav,train,SPK003,proxima
+New recording 4.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 4.wav,train,SPK003,proxima
+New recording 21.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 21.wav,train,SPK003,proxima
+New recording 24.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 24.wav,train,SPK003,proxima
+New recording 17.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 17.wav,train,SPK003,proxima
+New recording 9.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 9.wav,train,SPK003,proxima
+New recording 32.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 32.wav,train,SPK003,proxima
+New recording 35.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 35.wav,train,SPK003,proxima
+New recording 29.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 29.wav,train,SPK003,proxima
+New recording 36.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 36.wav,train,SPK003,proxima
+New recording 13.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 13.wav,train,SPK003,proxima
+New recording 25.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 25.wav,train,SPK003,proxima
+New recording 31.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 31.wav,train,SPK003,proxima
+New recording 37.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 37.wav,train,SPK003,proxima
+New recording 33.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 33.wav,train,SPK003,proxima
+New recording 39.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 39.wav,train,SPK003,proxima
+New recording 6.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 6.wav,train,SPK003,proxima
+New recording 11.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 11.wav,train,SPK003,proxima
+New recording 14.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 14.wav,train,SPK003,proxima
+New recording 40.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 40.wav,test,SPK003,proxima
+New recording 12.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 12.wav,test,SPK003,proxima
+New recording 23.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 23.wav,test,SPK003,proxima
+New recording 27.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 27.wav,test,SPK003,proxima
+New recording 30.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 30.wav,test,SPK003,proxima
+New recording 16.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 16.wav,test,SPK003,proxima
+New recording 10.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 10.wav,test,SPK003,proxima
+New recording 38.wav,PROXIMA_DATA_1/SPK003/proxima/New recording 38.wav,test,SPK003,proxima
+Recording (42).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (42).wav,train,SPK005,proxima
+Recording (36).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (36).wav,train,SPK005,proxima
+Copy of Recording (35).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (35).wav,train,SPK005,proxima
+Copy of Recording (29).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (29).wav,train,SPK005,proxima
+Recording (46).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (46).wav,train,SPK005,proxima
+Copy of Recording (27).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (27).wav,train,SPK005,proxima
+Copy of Recording (32).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (32).wav,train,SPK005,proxima
+Copy of Recording (2).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (2).wav,train,SPK005,proxima
+Copy of Recording (28).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (28).wav,train,SPK005,proxima
+Recording (16).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (16).wav,train,SPK005,proxima
+Recording (11).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (11).wav,train,SPK005,proxima
+Recording (35).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (35).wav,train,SPK005,proxima
+Copy of Recording (46).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (46).wav,train,SPK005,proxima
+Recording (22).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (22).wav,train,SPK005,proxima
+Recording (8).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (8).wav,train,SPK005,proxima
+Recording (18).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (18).wav,train,SPK005,proxima
+Copy of Recording (48).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (48).wav,train,SPK005,proxima
+Recording (41).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (41).wav,train,SPK005,proxima
+Copy of Recording (23).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (23).wav,train,SPK005,proxima
+Copy of Recording (51).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (51).wav,train,SPK005,proxima
+Copy of Recording (31).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (31).wav,train,SPK005,proxima
+Copy of Recording (41).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (41).wav,train,SPK005,proxima
+Recording (13).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (13).wav,train,SPK005,proxima
+Recording (4).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (4).wav,train,SPK005,proxima
+Copy of Recording (11).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (11).wav,train,SPK005,proxima
+Copy of Recording (8).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (8).wav,train,SPK005,proxima
+Copy of Recording (44).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (44).wav,train,SPK005,proxima
+Copy of Recording (45).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (45).wav,train,SPK005,proxima
+Recording (31).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (31).wav,train,SPK005,proxima
+Copy of Recording (22).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (22).wav,train,SPK005,proxima
+Copy of Recording (40).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (40).wav,train,SPK005,proxima
+Copy of Recording (47).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (47).wav,train,SPK005,proxima
+Copy of Recording (15).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (15).wav,train,SPK005,proxima
+Recording (49).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (49).wav,train,SPK005,proxima
+Recording (23).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (23).wav,train,SPK005,proxima
+Recording (10).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (10).wav,train,SPK005,proxima
+Recording (47).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (47).wav,train,SPK005,proxima
+Recording (40).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (40).wav,train,SPK005,proxima
+Recording (43).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (43).wav,train,SPK005,proxima
+Copy of Recording.wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording.wav,train,SPK005,proxima
+Recording (38).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (38).wav,train,SPK005,proxima
+Copy of Recording (26).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (26).wav,train,SPK005,proxima
+Copy of Recording (20).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (20).wav,train,SPK005,proxima
+Recording (37).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (37).wav,train,SPK005,proxima
+Recording (44).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (44).wav,train,SPK005,proxima
+Recording (5).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (5).wav,train,SPK005,proxima
+Copy of Recording (42).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (42).wav,train,SPK005,proxima
+Copy of Recording (9).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (9).wav,train,SPK005,proxima
+Recording (26).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (26).wav,train,SPK005,proxima
+Copy of Recording (24).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (24).wav,train,SPK005,proxima
+Recording (20).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (20).wav,train,SPK005,proxima
+Copy of Recording (30).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (30).wav,train,SPK005,proxima
+Recording (30).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (30).wav,train,SPK005,proxima
+Copy of Recording (34).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (34).wav,train,SPK005,proxima
+Recording (19).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (19).wav,train,SPK005,proxima
+Copy of Recording (16).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (16).wav,train,SPK005,proxima
+Recording (17).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (17).wav,train,SPK005,proxima
+Copy of Recording (49).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (49).wav,train,SPK005,proxima
+Recording (9).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (9).wav,train,SPK005,proxima
+Copy of Recording (13).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (13).wav,train,SPK005,proxima
+Copy of Recording (7).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (7).wav,train,SPK005,proxima
+Recording (25).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (25).wav,train,SPK005,proxima
+Recording (45).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (45).wav,train,SPK005,proxima
+Recording (6).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (6).wav,train,SPK005,proxima
+Recording (14).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (14).wav,train,SPK005,proxima
+Copy of Recording (6).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (6).wav,train,SPK005,proxima
+Recording (15).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (15).wav,train,SPK005,proxima
+Recording (27).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (27).wav,train,SPK005,proxima
+Copy of Recording (21).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (21).wav,train,SPK005,proxima
+Copy of Recording (33).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (33).wav,train,SPK005,proxima
+Recording (12).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (12).wav,train,SPK005,proxima
+Recording (33).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (33).wav,train,SPK005,proxima
+Copy of Recording (4).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (4).wav,train,SPK005,proxima
+Recording (2).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (2).wav,train,SPK005,proxima
+Recording (50).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (50).wav,train,SPK005,proxima
+Recording (32).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (32).wav,train,SPK005,proxima
+Copy of Recording (25).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (25).wav,train,SPK005,proxima
+Recording (28).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (28).wav,train,SPK005,proxima
+Copy of Recording (36).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (36).wav,train,SPK005,proxima
+Recording (21).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (21).wav,train,SPK005,proxima
+Copy of Recording (43).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (43).wav,test,SPK005,proxima
+Copy of Recording (39).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (39).wav,test,SPK005,proxima
+Recording (24).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (24).wav,test,SPK005,proxima
+Recording (48).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (48).wav,test,SPK005,proxima
+Copy of Recording (5).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (5).wav,test,SPK005,proxima
+Copy of Recording (14).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (14).wav,test,SPK005,proxima
+Recording.wav,PROXIMA_DATA_1/SPK005/proxima/Recording.wav,test,SPK005,proxima
+Recording (51).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (51).wav,test,SPK005,proxima
+Copy of Recording (17).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (17).wav,test,SPK005,proxima
+Recording (39).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (39).wav,test,SPK005,proxima
+Copy of Recording (19).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (19).wav,test,SPK005,proxima
+Copy of Recording (10).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (10).wav,test,SPK005,proxima
+Copy of Recording (37).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (37).wav,test,SPK005,proxima
+Recording (7).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (7).wav,test,SPK005,proxima
+Copy of Recording (38).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (38).wav,test,SPK005,proxima
+Recording (29).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (29).wav,test,SPK005,proxima
+Recording (34).wav,PROXIMA_DATA_1/SPK005/proxima/Recording (34).wav,test,SPK005,proxima
+Copy of Recording (12).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (12).wav,test,SPK005,proxima
+Copy of Recording (50).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (50).wav,test,SPK005,proxima
+Copy of Recording (18).wav,PROXIMA_DATA_1/SPK005/proxima/Copy of Recording (18).wav,test,SPK005,proxima
+Recording (19).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (19).wav,train,SPK005,unknown
+Recording (10).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (10).wav,train,SPK005,unknown
+Recording (38).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (38).wav,train,SPK005,unknown
+Recording (31).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (31).wav,train,SPK005,unknown
+Recording (32).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (32).wav,train,SPK005,unknown
+Recording (24).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (24).wav,train,SPK005,unknown
+Recording (37).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (37).wav,train,SPK005,unknown
+Recording (29).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (29).wav,train,SPK005,unknown
+Recording (16).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (16).wav,train,SPK005,unknown
+Recording (39).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (39).wav,train,SPK005,unknown
+Recording (23).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (23).wav,train,SPK005,unknown
+Recording (5).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (5).wav,train,SPK005,unknown
+Recording (9).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (9).wav,train,SPK005,unknown
+Recording (26).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (26).wav,train,SPK005,unknown
+Recording (34).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (34).wav,train,SPK005,unknown
+Recording (18).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (18).wav,train,SPK005,unknown
+Recording (8).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (8).wav,train,SPK005,unknown
+Recording (25).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (25).wav,train,SPK005,unknown
+Recording (22).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (22).wav,train,SPK005,unknown
+Recording (12).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (12).wav,train,SPK005,unknown
+Recording (30).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (30).wav,train,SPK005,unknown
+Recording (11).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (11).wav,train,SPK005,unknown
+Recording (28).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (28).wav,train,SPK005,unknown
+Recording (33).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (33).wav,train,SPK005,unknown
+Recording (36).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (36).wav,train,SPK005,unknown
+Recording (27).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (27).wav,train,SPK005,unknown
+Recording (7).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (7).wav,train,SPK005,unknown
+Recording (21).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (21).wav,train,SPK005,unknown
+Recording (17).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (17).wav,train,SPK005,unknown
+Recording (35).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (35).wav,train,SPK005,unknown
+Recording (3).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (3).wav,train,SPK005,unknown
+Recording (6).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (6).wav,train,SPK005,unknown
+Recording (14).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (14).wav,test,SPK005,unknown
+Recording (20).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (20).wav,test,SPK005,unknown
+Recording (15).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (15).wav,test,SPK005,unknown
+Recording.wav,PROXIMA_DATA_1/SPK005/unknown/Recording.wav,test,SPK005,unknown
+Recording (13).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (13).wav,test,SPK005,unknown
+Recording (2).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (2).wav,test,SPK005,unknown
+Recording (40).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (40).wav,test,SPK005,unknown
+Recording (4).wav,PROXIMA_DATA_1/SPK005/unknown/Recording (4).wav,test,SPK005,unknown
+New recording 23.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 23.wav,train,SPK006,proxima
+New recording 30.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 30.wav,train,SPK006,proxima
+New recording 29.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 29.wav,train,SPK006,proxima
+New recording 7.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 7.wav,train,SPK006,proxima
+New recording 19.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 19.wav,train,SPK006,proxima
+New recording 33.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 33.wav,train,SPK006,proxima
+New recording 26.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 26.wav,train,SPK006,proxima
+New recording 20.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 20.wav,train,SPK006,proxima
+New recording 4.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 4.wav,train,SPK006,proxima
+New recording 17.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 17.wav,train,SPK006,proxima
+New recording 32.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 32.wav,train,SPK006,proxima
+New recording 10.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 10.wav,train,SPK006,proxima
+New recording 37.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 37.wav,train,SPK006,proxima
+New recording 34.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 34.wav,train,SPK006,proxima
+New recording 3.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 3.wav,train,SPK006,proxima
+New recording 12.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 12.wav,train,SPK006,proxima
+New recording 28.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 28.wav,train,SPK006,proxima
+New recording 9.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 9.wav,train,SPK006,proxima
+New recording 38.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 38.wav,train,SPK006,proxima
+New recording 27.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 27.wav,train,SPK006,proxima
+New recording 31.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 31.wav,train,SPK006,proxima
+New recording 25.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 25.wav,train,SPK006,proxima
+New recording 22.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 22.wav,train,SPK006,proxima
+New recording 14.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 14.wav,train,SPK006,proxima
+New recording 18.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 18.wav,train,SPK006,proxima
+New recording 35.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 35.wav,train,SPK006,proxima
+New recording 16.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 16.wav,train,SPK006,proxima
+New recording 11.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 11.wav,train,SPK006,proxima
+New recording 2.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 2.wav,train,SPK006,proxima
+New recording 8.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 8.wav,train,SPK006,proxima
+New recording 5.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 5.wav,train,SPK006,proxima
+New recording 24.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 24.wav,train,SPK006,proxima
+New recording 39.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 39.wav,test,SPK006,proxima
+New recording 21.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 21.wav,test,SPK006,proxima
+New recording 40.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 40.wav,test,SPK006,proxima
+New recording 13.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 13.wav,test,SPK006,proxima
+New recording 15.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 15.wav,test,SPK006,proxima
+New recording 6.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 6.wav,test,SPK006,proxima
+New recording 36.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 36.wav,test,SPK006,proxima
+New recording 1.wav,PROXIMA_DATA_1/SPK006/proxima/New recording 1.wav,test,SPK006,proxima
+New recording 61.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 61.wav,train,SPK006,unknown
+New recording 10.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 10.wav,train,SPK006,unknown
+New recording 42.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 42.wav,train,SPK006,unknown
+New recording 44.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 44.wav,train,SPK006,unknown
+New recording 23.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 23.wav,train,SPK006,unknown
+New recording 20.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 20.wav,train,SPK006,unknown
+New recording 60.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 60.wav,train,SPK006,unknown
+New recording 22.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 22.wav,train,SPK006,unknown
+New recording 28.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 28.wav,train,SPK006,unknown
+New recording 33.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 33.wav,train,SPK006,unknown
+New recording 6.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 6.wav,train,SPK006,unknown
+New recording 37.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 37.wav,train,SPK006,unknown
+New recording 4.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 4.wav,train,SPK006,unknown
+New recording 32.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 32.wav,train,SPK006,unknown
+New recording 70.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 70.wav,train,SPK006,unknown
+New recording 53.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 53.wav,train,SPK006,unknown
+New recording 38.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 38.wav,train,SPK006,unknown
+New recording 26.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 26.wav,train,SPK006,unknown
+New recording 14.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 14.wav,train,SPK006,unknown
+New recording 58.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 58.wav,train,SPK006,unknown
+New recording 51.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 51.wav,train,SPK006,unknown
+New recording 49.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 49.wav,train,SPK006,unknown
+New recording 21.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 21.wav,train,SPK006,unknown
+New recording 25.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 25.wav,train,SPK006,unknown
+New recording 31.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 31.wav,train,SPK006,unknown
+New recording 69.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 69.wav,train,SPK006,unknown
+New recording 12.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 12.wav,train,SPK006,unknown
+New recording 36.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 36.wav,train,SPK006,unknown
+New recording 9.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 9.wav,train,SPK006,unknown
+New recording 64.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 64.wav,train,SPK006,unknown
+New recording 7.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 7.wav,train,SPK006,unknown
+New recording 3.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 3.wav,train,SPK006,unknown
+New recording 45.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 45.wav,train,SPK006,unknown
+New recording 47.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 47.wav,train,SPK006,unknown
+New recording 27.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 27.wav,train,SPK006,unknown
+New recording 48.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 48.wav,train,SPK006,unknown
+New recording 62.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 62.wav,train,SPK006,unknown
+New recording 55.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 55.wav,train,SPK006,unknown
+New recording 56.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 56.wav,train,SPK006,unknown
+New recording 63.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 63.wav,train,SPK006,unknown
+New recording 43.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 43.wav,train,SPK006,unknown
+New recording 30.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 30.wav,train,SPK006,unknown
+New recording 8.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 8.wav,train,SPK006,unknown
+New recording 40.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 40.wav,train,SPK006,unknown
+New recording 18.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 18.wav,train,SPK006,unknown
+New recording 5.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 5.wav,train,SPK006,unknown
+New recording 13.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 13.wav,train,SPK006,unknown
+New recording 16.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 16.wav,train,SPK006,unknown
+New recording 65.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 65.wav,train,SPK006,unknown
+New recording 57.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 57.wav,train,SPK006,unknown
+New recording 34.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 34.wav,train,SPK006,unknown
+New recording 50.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 50.wav,train,SPK006,unknown
+New recording 67.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 67.wav,train,SPK006,unknown
+New recording 35.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 35.wav,train,SPK006,unknown
+New recording 52.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 52.wav,train,SPK006,unknown
+New recording 19.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 19.wav,train,SPK006,unknown
+New recording 24.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 24.wav,test,SPK006,unknown
+New recording 46.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 46.wav,test,SPK006,unknown
+New recording 17.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 17.wav,test,SPK006,unknown
+New recording 54.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 54.wav,test,SPK006,unknown
+New recording 29.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 29.wav,test,SPK006,unknown
+New recording 1.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 1.wav,test,SPK006,unknown
+New recording 11.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 11.wav,test,SPK006,unknown
+New recording 41.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 41.wav,test,SPK006,unknown
+New recording 59.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 59.wav,test,SPK006,unknown
+New recording 2.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 2.wav,test,SPK006,unknown
+New recording 15.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 15.wav,test,SPK006,unknown
+New recording 39.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 39.wav,test,SPK006,unknown
+New recording 66.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 66.wav,test,SPK006,unknown
+New recording 68.wav,PROXIMA_DATA_1/SPK006/unknown/New recording 68.wav,test,SPK006,unknown
+New recording 23.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 23.wav,train,SPK008,proxima
+New recording 6.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 6.wav,train,SPK008,proxima
+New recording 26.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 26.wav,train,SPK008,proxima
+New recording 30.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 30.wav,train,SPK008,proxima
+New recording 29.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 29.wav,train,SPK008,proxima
+New recording 4.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 4.wav,train,SPK008,proxima
+New recording 16.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 16.wav,train,SPK008,proxima
+New recording 14.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 14.wav,train,SPK008,proxima
+New recording 15.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 15.wav,train,SPK008,proxima
+New recording 21.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 21.wav,train,SPK008,proxima
+New recording 39.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 39.wav,train,SPK008,proxima
+New recording 5.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 5.wav,train,SPK008,proxima
+New recording 13.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 13.wav,train,SPK008,proxima
+New recording 18.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 18.wav,train,SPK008,proxima
+New recording 33.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 33.wav,train,SPK008,proxima
+New recording 32.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 32.wav,train,SPK008,proxima
+New recording 12.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 12.wav,train,SPK008,proxima
+New recording 1.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 1.wav,train,SPK008,proxima
+New recording 7.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 7.wav,train,SPK008,proxima
+New recording 25.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 25.wav,train,SPK008,proxima
+New recording 37.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 37.wav,train,SPK008,proxima
+New recording 24.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 24.wav,train,SPK008,proxima
+New recording 28.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 28.wav,train,SPK008,proxima
+New recording 2.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 2.wav,train,SPK008,proxima
+New recording 35.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 35.wav,train,SPK008,proxima
+New recording 31.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 31.wav,train,SPK008,proxima
+New recording 11.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 11.wav,train,SPK008,proxima
+New recording 34.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 34.wav,train,SPK008,proxima
+New recording 17.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 17.wav,train,SPK008,proxima
+New recording 19.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 19.wav,train,SPK008,proxima
+New recording 38.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 38.wav,train,SPK008,proxima
+New recording 8.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 8.wav,train,SPK008,proxima
+New recording 10.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 10.wav,test,SPK008,proxima
+New recording 40.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 40.wav,test,SPK008,proxima
+New recording 9.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 9.wav,test,SPK008,proxima
+New recording 27.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 27.wav,test,SPK008,proxima
+New recording 3.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 3.wav,test,SPK008,proxima
+New recording 36.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 36.wav,test,SPK008,proxima
+New recording 20.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 20.wav,test,SPK008,proxima
+New recording 22.wav,PROXIMA_DATA_1/SPK008/proxima/New recording 22.wav,test,SPK008,proxima
+2026-09-05_175335211.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175335211.wav,train,SPK009,proxima
+2026-09-05_174817213.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174817213.wav,train,SPK009,proxima
+2026-09-05_174909730.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174909730.wav,train,SPK009,proxima
+2026-09-05_174919297.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174919297.wav,train,SPK009,proxima
+2026-09-05_175549966.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175549966.wav,train,SPK009,proxima
+2026-09-05_175755637.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175755637.wav,train,SPK009,proxima
+2026-09-05_174927042.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174927042.wav,train,SPK009,proxima
+2026-09-05_175040781.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175040781.wav,train,SPK009,proxima
+2026-09-05_175058185.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175058185.wav,train,SPK009,proxima
+2026-09-05_175106103.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175106103.wav,train,SPK009,proxima
+2026-09-05_175807690.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175807690.wav,train,SPK009,proxima
+2026-09-05_174950984.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174950984.wav,train,SPK009,proxima
+2026-09-05_175035081.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175035081.wav,train,SPK009,proxima
+2026-09-05_175238432.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175238432.wav,train,SPK009,proxima
+2026-09-05_175509784.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175509784.wav,train,SPK009,proxima
+2026-09-05_175132455.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175132455.wav,train,SPK009,proxima
+2026-09-05_174915218.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174915218.wav,train,SPK009,proxima
+2026-09-05_175741421.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175741421.wav,train,SPK009,proxima
+2026-09-05_175052906.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175052906.wav,train,SPK009,proxima
+2026-09-05_175144000.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175144000.wav,train,SPK009,proxima
+2026-09-05_175647100.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175647100.wav,train,SPK009,proxima
+2026-09-05_174944456.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174944456.wav,train,SPK009,proxima
+2026-09-05_175030386.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175030386.wav,train,SPK009,proxima
+2026-09-05_175522693.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175522693.wav,train,SPK009,proxima
+2026-09-05_175246530.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175246530.wav,train,SPK009,proxima
+2026-09-05_175815590.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175815590.wav,train,SPK009,proxima
+2026-09-05_174937906.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174937906.wav,train,SPK009,proxima
+2026-09-05_175638454.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175638454.wav,train,SPK009,proxima
+2026-09-05_174848261.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174848261.wav,train,SPK009,proxima
+2026-09-05_175652723.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175652723.wav,train,SPK009,proxima
+2026-09-05_175607880.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175607880.wav,train,SPK009,proxima
+2026-09-05_175112247.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175112247.wav,train,SPK009,proxima
+2026-09-05_175120781.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175120781.wav,train,SPK009,proxima
+2026-09-05_174854894.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174854894.wav,train,SPK009,proxima
+2026-09-05_175802611.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175802611.wav,test,SPK009,proxima
+2026-09-05_175136421.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175136421.wav,test,SPK009,proxima
+2026-09-05_175012295.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175012295.wav,test,SPK009,proxima
+2026-09-05_175631798.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175631798.wav,test,SPK009,proxima
+2026-09-05_175626671.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175626671.wav,test,SPK009,proxima
+2026-09-05_174801723.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174801723.wav,test,SPK009,proxima
+2026-09-05_175321677.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175321677.wav,test,SPK009,proxima
+2026-09-05_174838004.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_174838004.wav,test,SPK009,proxima
+2026-09-05_175046700.wav,PROXIMA_DATA_1/SPK009/proxima/2026-09-05_175046700.wav,test,SPK009,proxima
