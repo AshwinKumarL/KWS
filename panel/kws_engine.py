@@ -373,13 +373,61 @@ class KWSEngine:
             "quantization": self.model_info.get("quantization", "Unknown")
         }
 
-    def process_audio_buffer(self, audio_data: np.ndarray, sample_rate: int = 16000) -> Dict[str, Any]:
-        """Convenience method: runs preprocessing + inference end-to-end on raw audio buffer."""
+    def process_audio_buffer(
+        self,
+        audio_data: np.ndarray,
+        sample_rate: int = 16000,
+        enable_energy_gate: bool = True,
+        energy_threshold_db: float = -42.0
+    ) -> Dict[str, Any]:
+        """
+        Runs RMS energy pre-filtering + feature extraction + inference end-to-end.
+        When enable_energy_gate is True and audio volume is below energy_threshold_db,
+        idle ambient noise is discarded immediately without computing heavy spectrograms.
+        """
+        # Calculate RMS energy of the incoming audio buffer
+        if audio_data is not None and len(audio_data) > 0:
+            raw_floats = audio_data.astype(np.float32)
+            if audio_data.dtype == np.int16:
+                raw_floats = raw_floats / 32768.0
+            rms = float(np.sqrt(np.mean(raw_floats ** 2)))
+            rms_db = float(20.0 * np.log10(max(rms, 1e-6)))
+        else:
+            rms = 0.0
+            rms_db = -100.0
+
+        # RMS Energy Gate Check
+        if enable_energy_gate and rms_db < energy_threshold_db:
+            return {
+                "prediction": "UNKNOWN",
+                "is_proxima": False,
+                "confidence_proxima": 0.0,
+                "confidence_unknown": 100.0,
+                "confidence": 100.0,
+                "inference_time_ms": 0.0,
+                "preprocessing_time_ms": 0.0,
+                "total_latency_ms": 0.0,
+                "cpu_duty_cycle_pct": 0.0,
+                "model_name": self.active_model_name,
+                "quantization": self.model_info.get("quantization", "Unknown"),
+                "is_speech": False,
+                "gated": True,
+                "rms_db": round(rms_db, 1),
+                "gate_threshold_db": round(energy_threshold_db, 1)
+            }
+
         feat_4d, prep_time_ms = self.preprocess_audio(audio_data, sample_rate)
         inf_result = self.run_inference(feat_4d)
         
+        tot_lat = round(prep_time_ms + inf_result["inference_time_ms"], 2)
+        duty_pct = round(min(100.0, (tot_lat / 250.0) * 100.0), 2)
         inf_result["preprocessing_time_ms"] = round(prep_time_ms, 2)
-        inf_result["total_latency_ms"] = round(prep_time_ms + inf_result["inference_time_ms"], 2)
+        inf_result["total_latency_ms"] = tot_lat
+        inf_result["cpu_duty_cycle_pct"] = duty_pct
+        inf_result["is_speech"] = True
+        inf_result["gated"] = False
+        inf_result["rms_db"] = round(rms_db, 1)
+        inf_result["gate_threshold_db"] = round(energy_threshold_db, 1)
         return inf_result
 
     def process_wav_bytes(self, audio_bytes: bytes, filename: str = "") -> Dict[str, Any]:

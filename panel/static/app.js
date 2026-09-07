@@ -47,10 +47,17 @@ class ProximaKWSClient {
     this.selectedUploadFile = null;
     this.lastDetectionTime = 0;
     this.lastLiveDetectionTime = 0;
-    this.liveCooldownMs = 1800; // 1.8s refractory cooldown for the 2.0s rolling buffer
+    this.liveCooldownMs = 2500; // 2.5s refractory cooldown (exceeds 2.0s buffer to guarantee 1 utterance = 1 count)
     this.liveDetectedState = false;
+    this.isStreamBusy = false; // Prevent overlapping asynchronous requests
     this.detectionHoldMs = 1200; // Hold green indicator for visibility
     this.detectionTimer = null;
+    
+    // Noise Rejection & Gating Configuration
+    this.energyGateEnabled = true;
+    this.energyThresholdDb = -42.0;
+    this.temporalSmoothingEnabled = true;
+    this.consecutiveProximaHits = 0;
     
     // Metrics
     this.totalInferences = 0;
@@ -89,6 +96,9 @@ class ProximaKWSClient {
     this.metricTotalTests = document.getElementById('metricTotalTests');
     this.metricFlashBudget = document.getElementById('metricFlashBudget');
     this.budgetProgressFill = document.getElementById('budgetProgressFill');
+    this.metricCpuVal = document.getElementById('metricCpuVal');
+    this.cpuProgressFill = document.getElementById('cpuProgressFill');
+    this.metricCpuSub = document.getElementById('metricCpuSub');
     this.thresholdSlider = document.getElementById('thresholdSlider');
     this.thresholdVal = document.getElementById('thresholdVal');
     
@@ -100,6 +110,18 @@ class ProximaKWSClient {
     this.micDbLabel = document.getElementById('micDbLabel');
     this.micErrorBanner = document.getElementById('micErrorBanner');
     this.micErrorDesc = document.getElementById('micErrorDesc');
+    
+    // Noise Rejection & Gating Controls
+    this.toggleEnergyGate = document.getElementById('toggleEnergyGate');
+    this.gateThresholdSlider = document.getElementById('gateThresholdSlider');
+    this.gateThresholdVal = document.getElementById('gateThresholdVal');
+    this.gateStatusText = document.getElementById('gateStatusText');
+    this.gateSliderRow = document.getElementById('gateSliderRow');
+    this.toggleSmoothing = document.getElementById('toggleSmoothing');
+    this.smoothingStatusText = document.getElementById('smoothingStatusText');
+    this.cooldownSlider = document.getElementById('cooldownSlider');
+    this.cooldownStatusText = document.getElementById('cooldownStatusText');
+    this.cooldownValDisplay = document.getElementById('cooldownValDisplay');
     
     // Mode 2: Audio File Upload Controls
     this.fileDropzone = document.getElementById('fileDropzone');
@@ -195,6 +217,55 @@ class ProximaKWSClient {
         this.totalInferences = 0;
         this.metricHits.textContent = '0';
         this.metricTotalTests.textContent = '0 total inferences';
+      });
+    }
+
+    // RMS Energy Gate Toggle
+    if (this.toggleEnergyGate) {
+      this.toggleEnergyGate.addEventListener('change', (e) => {
+        this.energyGateEnabled = e.target.checked;
+        if (this.gateSliderRow) this.gateSliderRow.style.display = this.energyGateEnabled ? 'flex' : 'none';
+        if (this.gateStatusText) {
+          this.gateStatusText.innerHTML = this.energyGateEnabled 
+            ? `Active (<b id="gateThresholdVal">${this.energyThresholdDb} dB</b> cutoff)` 
+            : '<span style="color: #94a3b8;">Disabled (raw microphone stream)</span>';
+        }
+      });
+    }
+
+    // RMS Energy Gate Slider
+    if (this.gateThresholdSlider) {
+      this.gateThresholdSlider.addEventListener('input', (e) => {
+        this.energyThresholdDb = parseFloat(e.target.value);
+        const valElem = document.getElementById('gateThresholdVal');
+        if (valElem) valElem.textContent = `${this.energyThresholdDb} dB`;
+      });
+    }
+
+    // Temporal Smoothing Toggle
+    if (this.toggleSmoothing) {
+      this.toggleSmoothing.addEventListener('change', (e) => {
+        this.temporalSmoothingEnabled = e.target.checked;
+        this.consecutiveProximaHits = 0;
+        if (this.smoothingStatusText) {
+          this.smoothingStatusText.textContent = this.temporalSmoothingEnabled
+            ? 'Active (discards transient 1-frame glitches)'
+            : 'Disabled (instant 1-frame trigger)';
+        }
+      });
+    }
+
+    // Refractory Cooldown Slider
+    if (this.cooldownSlider) {
+      this.cooldownSlider.addEventListener('input', (e) => {
+        this.liveCooldownMs = parseInt(e.target.value, 10);
+        const secText = `${(this.liveCooldownMs / 1000).toFixed(1)}s`;
+        if (this.cooldownValDisplay) {
+          this.cooldownValDisplay.textContent = secText;
+        }
+        if (this.cooldownStatusText) {
+          this.cooldownStatusText.innerHTML = `Active (<b id="cooldownValDisplay">${secText}</b> lockout window)`;
+        }
       });
     }
   }
@@ -403,8 +474,11 @@ class ProximaKWSClient {
 
   stopLiveListening() {
     this.isLiveListening = false;
+    this.isStreamBusy = false;
     this.liveDetectedState = false;
     this.lastLiveDetectionTime = 0;
+    this.consecutiveProximaHits = 0;
+    this.ringBuffer.fill(0);
     if (this.scriptProcessor) {
       this.scriptProcessor.disconnect();
       this.scriptProcessor = null;
@@ -435,19 +509,26 @@ class ProximaKWSClient {
 
   async sendStreamInference() {
     if (!this.isLiveListening) return;
+    if (this.isStreamBusy) return; // Prevent concurrent requests from colliding and causing out-of-order triggers
 
-    // Linearize circular buffer into continuous 2.0s 16kHz array
-    const orderedSamples = new Float32Array(32000);
-    const startIdx = this.ringBufferIndex;
-    const len1 = 32000 - startIdx;
-    orderedSamples.set(this.ringBuffer.subarray(startIdx), 0);
-    orderedSamples.set(this.ringBuffer.subarray(0, startIdx), len1);
-
+    this.isStreamBusy = true;
     try {
+      // Linearize circular buffer into continuous 2.0s 16kHz array
+      const orderedSamples = new Float32Array(32000);
+      const startIdx = this.ringBufferIndex;
+      const len1 = 32000 - startIdx;
+      orderedSamples.set(this.ringBuffer.subarray(startIdx), 0);
+      orderedSamples.set(this.ringBuffer.subarray(0, startIdx), len1);
+
       const res = await fetch('/api/predict/stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ samples: Array.from(orderedSamples), sample_rate: 16000 })
+        body: JSON.stringify({
+          samples: Array.from(orderedSamples),
+          sample_rate: 16000,
+          enable_energy_gate: this.energyGateEnabled,
+          energy_threshold_db: this.energyThresholdDb
+        })
       });
       if (res.ok) {
         const data = await res.json();
@@ -455,6 +536,8 @@ class ProximaKWSClient {
       }
     } catch (err) {
       console.error('Live stream inference error:', err);
+    } finally {
+      this.isStreamBusy = false;
     }
   }
 
@@ -728,32 +811,74 @@ class ProximaKWSClient {
     const infTime = typeof data.inference_time_ms === 'number' ? data.inference_time_ms : 0.0;
     const prepTime = typeof data.preprocessing_time_ms === 'number' ? data.preprocessing_time_ms : 0.0;
     
-    const isProxima = data.is_proxima && (confP >= this.threshold);
     const now = Date.now();
     const isLive = (mode === 'Live Stream');
+    const isGated = Boolean(data.gated);
 
-    // Non-maximum suppression / debouncing for continuous audio streams:
-    // Because the 2.0s rolling buffer shifts by only 250ms per evaluation,
-    // a single spoken word remains in the audio buffer for 6-8 consecutive inferences.
-    // We enforce an edge-trigger with an 1800ms cooldown refractory period so 1 utterance = 1 count.
-    let isNewTrigger = false;
-    if (isProxima) {
-      if (isLive) {
-        const elapsed = now - this.lastLiveDetectionTime;
-        if (!this.liveDetectedState && elapsed > this.liveCooldownMs) {
-          isNewTrigger = true;
-          this.liveDetectedState = true;
-          this.lastLiveDetectionTime = now;
+    // 1. Raw threshold decision (gated silence is never proxima)
+    const isProximaRaw = data.is_proxima && (confP >= this.threshold) && !isGated;
+
+    // 2. Temporal Smoothing / Multi-Frame Confirmation:
+    // Spoken "PROXIMA" takes ~500ms (2-3 consecutive 250ms evaluation frames).
+    // When enabled, requires 2 consecutive frames with confidence >= threshold to trigger.
+    // Random noise spikes last only 1 frame and are automatically eliminated!
+    let isProximaCandidate = false;
+    if (isLive && this.temporalSmoothingEnabled) {
+      if (isProximaRaw) {
+        this.consecutiveProximaHits++;
+        if (this.consecutiveProximaHits >= 2) {
+          isProximaCandidate = true;
         }
       } else {
-        // Discrete tests (uploaded audio, dataset sample, microphone recording) are always 1-to-1
-        isNewTrigger = true;
+        this.consecutiveProximaHits = 0;
+        isProximaCandidate = false;
       }
     } else {
-      // Re-arm when speech drops below threshold and minimum cooldown has elapsed
-      if (isLive && (now - this.lastLiveDetectionTime > this.liveCooldownMs)) {
-        this.liveDetectedState = false;
+      isProximaCandidate = isProximaRaw;
+      if (!isProximaRaw) this.consecutiveProximaHits = 0;
+    }
+
+    // 3. Robust Edge-Trigger, Buffer-Flush & Anti-Repeat Debounce Logic:
+    let isNewTrigger = false;
+    let isProxima = false;
+
+    if (isLive) {
+      const elapsed = now - this.lastLiveDetectionTime;
+      const inCooldown = (elapsed < this.liveCooldownMs);
+
+      if (inCooldown) {
+        // Within refractory lockout window:
+        // Strictly prevent count increment or secondary re-triggering on trailing audio
+        isNewTrigger = false;
+        isProxima = false;
+      } else {
+        // Cooldown has elapsed. Check for re-arming.
+        if (this.liveDetectedState) {
+          // Re-arm only after speech drops below threshold (hysteresis guard)
+          if (!isProximaRaw || confP < this.threshold) {
+            this.liveDetectedState = false;
+            this.consecutiveProximaHits = 0;
+          }
+        }
+
+        // If system is armed and keyword is confirmed:
+        if (!this.liveDetectedState && isProximaCandidate) {
+          isNewTrigger = true;
+          isProxima = true;
+          this.liveDetectedState = true;
+          this.lastLiveDetectionTime = now;
+          this.consecutiveProximaHits = 0;
+
+          // CRITICAL STEP: Flush the circular 2.0s audio buffer with zeroes immediately!
+          // This removes the keyword audio from lingering across future 250ms evaluation windows,
+          // guaranteeing that 1 spoken utterance generates EXACTLY 1 detection count.
+          this.ringBuffer.fill(0);
+        }
       }
+    } else {
+      // Discrete tests (uploaded audio, dataset sample, microphone recording) are always 1-to-1
+      isNewTrigger = isProximaCandidate;
+      isProxima = isProximaCandidate;
     }
 
     if (isNewTrigger) {
@@ -764,9 +889,20 @@ class ProximaKWSClient {
 
     // Update Quick Metrics
     this.metricLatency.textContent = infTime.toFixed(1);
-    this.metricPreproc.textContent = `Prep: ${prepTime.toFixed(1)} ms`;
+    if (isGated) {
+      this.metricPreproc.textContent = `Gated (${data.rms_db || -50} dB)`;
+    } else {
+      this.metricPreproc.textContent = `Prep: ${prepTime.toFixed(1)} ms`;
+    }
     this.metricHits.textContent = this.proximaHits;
     this.metricTotalTests.textContent = `${this.totalInferences} total inferences`;
+
+    // Update CPU Workload & Duty Cycle
+    const dutyPct = typeof data.cpu_duty_cycle_pct === 'number' ? data.cpu_duty_cycle_pct : (data.total_latency_ms ? Math.min(100.0, (data.total_latency_ms / 250.0) * 100.0) : 0.0);
+    const hostCpu = typeof data.host_cpu_pct === 'number' ? data.host_cpu_pct : 0.0;
+    if (this.metricCpuVal) this.metricCpuVal.textContent = dutyPct.toFixed(1);
+    if (this.cpuProgressFill) this.cpuProgressFill.style.width = `${Math.min(dutyPct * 10, 100)}%`;
+    if (this.metricCpuSub) this.metricCpuSub.textContent = `Duty: ${dutyPct.toFixed(1)}% | Host: ${hostCpu.toFixed(0)}%`;
 
     // Update Confidence Split Bar
     this.confProximaVal.textContent = `${confP.toFixed(1)}%`;
@@ -774,21 +910,18 @@ class ProximaKWSClient {
     this.confBarFill.style.width = `${confP.toFixed(1)}%`;
 
     // GREEN DETECTION INDICATOR ACTIVATION
-    if (isProxima) {
+    if (isNewTrigger) {
       this.activateProximaDetection(confP, infTime);
-      // Only log to history table on a distinct NEW trigger
-      if (isNewTrigger) {
-        this.addHistoryRecord({
-          time: new Date().toLocaleTimeString(),
-          mode: mode,
-          result: 'PROXIMA',
-          confProxima: confP,
-          confUnknown: confU,
-          latency: infTime,
-          model: data.model_name || this.currentModelDisplay.textContent
-        });
-      }
-    } else {
+      this.addHistoryRecord({
+        time: new Date().toLocaleTimeString(),
+        mode: mode,
+        result: 'PROXIMA',
+        confProxima: confP,
+        confUnknown: confU,
+        latency: infTime,
+        model: data.model_name || this.currentModelDisplay.textContent
+      });
+    } else if (!isProxima) {
       if (mode !== 'Live Stream') {
         // Only log discrete tests in history, don't spam table with continuous negative stream
         this.addHistoryRecord({
@@ -805,7 +938,15 @@ class ProximaKWSClient {
       // If we are currently holding a positive detection glow, let it finish its timer
       if (!this.detectionCard.classList.contains('is-detected')) {
         if (this.isLiveListening) {
-          this.setListeningState('LISTENING');
+          const inCooldown = (now - this.lastLiveDetectionTime < this.liveCooldownMs) && this.liveDetectedState;
+          if (inCooldown) {
+            const remainSec = Math.ceil((this.liveCooldownMs - (now - this.lastLiveDetectionTime)) / 1000);
+            this.setListeningState('COOLDOWN', remainSec);
+          } else if (isGated) {
+            this.setListeningState('GATED');
+          } else {
+            this.setListeningState('LISTENING');
+          }
         } else {
           this.setListeningState('STANDBY');
         }
@@ -828,15 +969,32 @@ class ProximaKWSClient {
     this.detectionTimer = setTimeout(() => {
       this.detectionCard.classList.remove('is-detected');
       if (this.isLiveListening) {
-        this.setListeningState('LISTENING');
+        const now = Date.now();
+        const inCooldown = (now - this.lastLiveDetectionTime < this.liveCooldownMs) && this.liveDetectedState;
+        if (inCooldown) {
+          const remainSec = Math.ceil((this.liveCooldownMs - (now - this.lastLiveDetectionTime)) / 1000);
+          this.setListeningState('COOLDOWN', remainSec);
+        } else {
+          this.setListeningState('LISTENING');
+        }
       } else {
         this.setListeningState('STANDBY');
       }
     }, this.detectionHoldMs);
   }
 
-  setListeningState(state) {
-    if (state === 'LISTENING') {
+  setListeningState(state, arg) {
+    if (state === 'COOLDOWN') {
+      this.listeningStatusPill.className = 'status-indicator-pill state-listening';
+      this.listeningStatusText.textContent = `● COOLDOWN (${arg || 1}s)`;
+      this.detectionTitle.textContent = 'COOLDOWN LOCKOUT ACTIVE';
+      this.detectionSubtitle.textContent = 'Wake-word registered. Preventing re-trigger on trailing audio...';
+    } else if (state === 'GATED') {
+      this.listeningStatusPill.className = 'status-indicator-pill state-listening';
+      this.listeningStatusText.textContent = '● SILENCE / GATED';
+      this.detectionTitle.textContent = 'LISTENING... (NOISE GATED)';
+      this.detectionSubtitle.textContent = 'Ambient room noise filtered out. Speak clearly to trigger.';
+    } else if (state === 'LISTENING') {
       this.listeningStatusPill.className = 'status-indicator-pill state-listening';
       this.listeningStatusText.textContent = '● LISTENING';
       this.detectionTitle.textContent = 'LISTENING...';

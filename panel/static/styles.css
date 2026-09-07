@@ -1089,3 +1089,113 @@ body {
 .file-meta {
   color: var(--text-dim);
 }
+
+/* ==========================================================================
+   NOISE REJECTION & GATING CONTROLS
+   ========================================================================== */
+.noise-controls-card {
+  margin-top: 14px;
+  background: rgba(10, 15, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: 0.2px;
+}
+
+.control-sub {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+.control-sub b {
+  color: var(--cyan-accent);
+}
+
+.control-sub-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.slider-subrow {
+  margin-top: 6px;
+  padding-left: 2px;
+}
+
+.control-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 10px 0;
+}
+
+/* Switch Toggle (iOS / Dark-mode style) */
+.switch-toggle {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.switch-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  transition: 0.25s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slider-toggle:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #94a3b8;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.switch-toggle input:checked + .slider-toggle {
+  background: rgba(0, 255, 136, 0.25);
+  border-color: rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.switch-toggle input:checked + .slider-toggle:before {
+  transform: translateX(18px);
+  background-color: #00ff88;
+  box-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
+}
