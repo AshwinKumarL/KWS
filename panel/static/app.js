@@ -46,6 +46,9 @@ class ProximaKWSClient {
     
     this.selectedUploadFile = null;
     this.lastDetectionTime = 0;
+    this.lastLiveDetectionTime = 0;
+    this.liveCooldownMs = 1800; // 1.8s refractory cooldown for the 2.0s rolling buffer
+    this.liveDetectedState = false;
     this.detectionHoldMs = 1200; // Hold green indicator for visibility
     this.detectionTimer = null;
     
@@ -182,6 +185,18 @@ class ProximaKWSClient {
       this.threshold = parseInt(e.target.value, 10);
       this.thresholdVal.textContent = `${this.threshold}%`;
     });
+
+    // Reset Hits / Inferences Counter
+    const resetHitsBtn = document.getElementById('resetHitsBtn');
+    if (resetHitsBtn) {
+      resetHitsBtn.addEventListener('click', () => {
+        this.proximaHits = 0;
+        this.unknownHits = 0;
+        this.totalInferences = 0;
+        this.metricHits.textContent = '0';
+        this.metricTotalTests.textContent = '0 total inferences';
+      });
+    }
   }
 
   /* ========================================================================
@@ -388,6 +403,8 @@ class ProximaKWSClient {
 
   stopLiveListening() {
     this.isLiveListening = false;
+    this.liveDetectedState = false;
+    this.lastLiveDetectionTime = 0;
     if (this.scriptProcessor) {
       this.scriptProcessor.disconnect();
       this.scriptProcessor = null;
@@ -712,9 +729,36 @@ class ProximaKWSClient {
     const prepTime = typeof data.preprocessing_time_ms === 'number' ? data.preprocessing_time_ms : 0.0;
     
     const isProxima = data.is_proxima && (confP >= this.threshold);
+    const now = Date.now();
+    const isLive = (mode === 'Live Stream');
+
+    // Non-maximum suppression / debouncing for continuous audio streams:
+    // Because the 2.0s rolling buffer shifts by only 250ms per evaluation,
+    // a single spoken word remains in the audio buffer for 6-8 consecutive inferences.
+    // We enforce an edge-trigger with an 1800ms cooldown refractory period so 1 utterance = 1 count.
+    let isNewTrigger = false;
     if (isProxima) {
-      this.proximaHits++;
+      if (isLive) {
+        const elapsed = now - this.lastLiveDetectionTime;
+        if (!this.liveDetectedState && elapsed > this.liveCooldownMs) {
+          isNewTrigger = true;
+          this.liveDetectedState = true;
+          this.lastLiveDetectionTime = now;
+        }
+      } else {
+        // Discrete tests (uploaded audio, dataset sample, microphone recording) are always 1-to-1
+        isNewTrigger = true;
+      }
     } else {
+      // Re-arm when speech drops below threshold and minimum cooldown has elapsed
+      if (isLive && (now - this.lastLiveDetectionTime > this.liveCooldownMs)) {
+        this.liveDetectedState = false;
+      }
+    }
+
+    if (isNewTrigger) {
+      this.proximaHits++;
+    } else if (!isProxima && !isLive) {
       this.unknownHits++;
     }
 
@@ -722,7 +766,7 @@ class ProximaKWSClient {
     this.metricLatency.textContent = infTime.toFixed(1);
     this.metricPreproc.textContent = `Prep: ${prepTime.toFixed(1)} ms`;
     this.metricHits.textContent = this.proximaHits;
-    this.metricTotalTests.textContent = `${this.totalInferences} total tests`;
+    this.metricTotalTests.textContent = `${this.totalInferences} total inferences`;
 
     // Update Confidence Split Bar
     this.confProximaVal.textContent = `${confP.toFixed(1)}%`;
@@ -732,15 +776,18 @@ class ProximaKWSClient {
     // GREEN DETECTION INDICATOR ACTIVATION
     if (isProxima) {
       this.activateProximaDetection(confP, infTime);
-      this.addHistoryRecord({
-        time: new Date().toLocaleTimeString(),
-        mode: mode,
-        result: 'PROXIMA',
-        confProxima: confP,
-        confUnknown: confU,
-        latency: infTime,
-        model: data.model_name || this.currentModelDisplay.textContent
-      });
+      // Only log to history table on a distinct NEW trigger
+      if (isNewTrigger) {
+        this.addHistoryRecord({
+          time: new Date().toLocaleTimeString(),
+          mode: mode,
+          result: 'PROXIMA',
+          confProxima: confP,
+          confUnknown: confU,
+          latency: infTime,
+          model: data.model_name || this.currentModelDisplay.textContent
+        });
+      }
     } else {
       if (mode !== 'Live Stream') {
         // Only log discrete tests in history, don't spam table with continuous negative stream

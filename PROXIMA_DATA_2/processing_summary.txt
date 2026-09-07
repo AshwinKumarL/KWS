@@ -1,0 +1,52 @@
+================================================================================
+PROXIMA_DATA_2 DATASET PROCESSING & STANDARDIZATION SUMMARY
+================================================================================
+
+Total source files discovered: 725
+Total successfully processed:  725
+Total failed:                  0
+Total skipped:                 0
+
+Number of SPK folders:         8
+Number of proxima recordings:  354
+Number of unknown recordings:  371
+
+--- Count by Original File Format ---
+  .m4a: 330
+  .wav: 395
+
+--- Count by Class ---
+  proxima: 354
+  unknown: 371
+
+--- Count by Speaker ---
+  SPK001: 81 source -> 81 output WAVs
+  SPK002: 251 source -> 251 output WAVs
+  SPK003: 40 source -> 40 output WAVs
+  SPK005: 140 source -> 140 output WAVs
+  SPK006: 110 source -> 110 output WAVs
+  SPK008: 40 source -> 40 output WAVs
+  SPK009: 43 source -> 43 output WAVs
+  SPK011: 20 source -> 20 output WAVs
+
+--- Validation Results ---
+Total output files generated:  725
+Validation failures:           0
+  ALL output files passed validation checks:
+    - Container: WAV
+    - Codec: PCM signed 16-bit little-endian (PCM_16)
+    - Channel: 1 (mono)
+    - Sample rate: 16000 Hz
+    - Frame count: exactly 32000 samples
+    - Duration: exactly 2.000 seconds
+
+--- Amplitude Statistics (Raw, Preserved) ---
+Peak Amplitude (int16 range 0..32767):
+  Min:  4674
+  Max:  32767
+  Mean: 17107.58
+RMS Amplitude:
+  Min:  510.77
+  Max:  9435.39
+  Mean: 2496.58
+Note: Amplitude characteristics were kept intact as requested (no unrequested normalization applied).

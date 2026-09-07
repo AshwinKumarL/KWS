@@ -107,7 +107,10 @@
           <span class="metric-sub" id="metricPreproc">Prep: 0.0 ms</span>
         </div>
         <div class="metric-card">
-          <span class="metric-label">PROXIMA DETECTIONS</span>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="metric-label">PROXIMA DETECTIONS</span>
+            <button id="resetHitsBtn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; font-size: 0.68rem; padding: 2px 6px; border-radius: 4px; cursor: pointer;" title="Reset count to 0">Reset</button>
+          </div>
           <div class="metric-value highlight-green" id="metricHits">0</div>
           <span class="metric-sub" id="metricTotalTests">0 total inferences</span>
         </div>
