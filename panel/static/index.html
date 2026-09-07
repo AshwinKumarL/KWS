@@ -107,7 +107,10 @@
           <span class="metric-sub" id="metricPreproc">Prep: 0.0 ms</span>
         </div>
         <div class="metric-card">
-          <span class="metric-label">PROXIMA DETECTIONS</span>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="metric-label">PROXIMA DETECTIONS</span>
+            <button id="resetHitsBtn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; font-size: 0.68rem; padding: 2px 6px; border-radius: 4px; cursor: pointer;" title="Reset count to 0">Reset</button>
+          </div>
           <div class="metric-value highlight-green" id="metricHits">0</div>
           <span class="metric-sub" id="metricTotalTests">0 total inferences</span>
         </div>
@@ -118,6 +121,14 @@
             <input type="range" id="thresholdSlider" min="40" max="95" value="60" step="5" title="Detection Confidence Threshold">
           </div>
           <span class="metric-sub">Trigger threshold</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">CPU WORKLOAD & DUTY</span>
+          <div class="metric-value"><span id="metricCpuVal">0.0</span><span class="unit">%</span></div>
+          <div class="micro-progress">
+            <div class="micro-fill" id="cpuProgressFill" style="width: 0.0%; background: var(--cyan-accent);"></div>
+          </div>
+          <span class="metric-sub" id="metricCpuSub">Edge Duty: 0.0% | Host: 0%</span>
         </div>
         <div class="metric-card">
           <span class="metric-label">ESP32 256KB BUDGET</span>
@@ -164,6 +175,52 @@
                 </div>
                 <div class="mic-level-track">
                   <div class="mic-level-bar" id="micLevelBar" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <!-- NOISE REJECTION & GATING CONTROLS -->
+              <div class="noise-controls-card">
+                <div class="control-row">
+                  <div class="control-info">
+                    <span class="control-title">RMS Energy Gate (Silence Cutoff)</span>
+                    <span class="control-sub" id="gateStatusText">Active (<b id="gateThresholdVal">-42 dB</b> cutoff)</span>
+                  </div>
+                  <label class="switch-toggle" title="Toggle RMS Energy Gate (filters out ambient noise below speech level)">
+                    <input type="checkbox" id="toggleEnergyGate" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+
+                <div class="control-row slider-subrow" id="gateSliderRow">
+                  <span class="control-sub-label">Sensitivity:</span>
+                  <input type="range" id="gateThresholdSlider" min="-55" max="-25" value="-42" step="1" title="Adjust noise floor threshold (-55dB quiet to -25dB noisy)">
+                </div>
+
+                <div class="control-divider"></div>
+
+                <div class="control-row">
+                  <div class="control-info">
+                    <span class="control-title">Temporal Smoothing (2-Frame Confirm)</span>
+                    <span class="control-sub" id="smoothingStatusText">Active (discards transient 1-frame glitches)</span>
+                  </div>
+                  <label class="switch-toggle" title="Toggle Temporal Multi-Frame Confirmation">
+                    <input type="checkbox" id="toggleSmoothing" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+
+                <div class="control-divider"></div>
+
+                <div class="control-row">
+                  <div class="control-info">
+                    <span class="control-title">Refractory Cooldown (Anti-Repeat)</span>
+                    <span class="control-sub" id="cooldownStatusText">Active (<b id="cooldownValDisplay">2.5s</b> lockout window)</span>
+                  </div>
+                </div>
+
+                <div class="control-row slider-subrow" id="cooldownSliderRow">
+                  <span class="control-sub-label">Lockout:</span>
+                  <input type="range" id="cooldownSlider" min="1500" max="4000" value="2500" step="250" title="Lockout cooldown window: guarantees 1 spoken utterance triggers exactly 1 detection">
                 </div>
               </div>
 

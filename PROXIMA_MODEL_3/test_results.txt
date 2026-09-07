@@ -1,0 +1,26 @@
+================================================================================
+PROXIMA MODEL V5 INDEPENDENT TEST RESULTS
+================================================================================
+
+Test Set Size: 225 clean unaugmented recordings
+Class Breakdown: PROXIMA=127, UNKNOWN=98
+
+--- FLOAT32 MODEL BENCHMARK ---
+  Accuracy:   99.11%
+  Precision:  98.45%
+  Recall:     100.00%
+  F1 Score:   99.22%
+  Latency:    0.07 ms
+  Confusion Matrix:
+[[ 96   2]
+ [  0 127]]
+
+--- INT8 MODEL BENCHMARK ---
+  Accuracy:   98.67%
+  Precision:  97.69%
+  Recall:     100.00%
+  F1 Score:   98.83%
+  Latency:    0.09 ms
+  Confusion Matrix:
+[[ 95   3]
+ [  0 127]]

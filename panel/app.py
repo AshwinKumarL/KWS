@@ -8,7 +8,10 @@ import numpy as np
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
+import psutil
 from pydantic import BaseModel
+
+PROCESS = psutil.Process()
 
 # Ensure panel module can import kws_engine
 CURRENT_DIR = Path(__file__).parent.resolve()
@@ -19,7 +22,7 @@ app = FastAPI(title="Proxima KWS Developer Panel", version="1.0.0")
 
 # Initialize KWS engine with models folder
 MODELS_DIR = CURRENT_DIR.parent / "models"
-engine = KWSEngine(models_dir=str(MODELS_DIR), default_model="proxima_v3_int8.tflite")
+engine = KWSEngine(models_dir=str(MODELS_DIR), default_model="proxima_v5_float32.tflite")
 
 class ModelSelectRequest(BaseModel):
     model_name: str
@@ -27,6 +30,8 @@ class ModelSelectRequest(BaseModel):
 class StreamPredictionRequest(BaseModel):
     samples: List[float]
     sample_rate: Optional[int] = 16000
+    enable_energy_gate: Optional[bool] = True
+    energy_threshold_db: Optional[float] = -42.0
 
 @app.get("/api/models")
 async def get_models():
@@ -67,7 +72,13 @@ async def predict_stream(req: StreamPredictionRequest):
         raise HTTPException(status_code=400, detail="Empty audio samples")
         
     audio_arr = np.array(req.samples, dtype=np.float32)
-    result = engine.process_audio_buffer(audio_arr, sample_rate=req.sample_rate)
+    result = engine.process_audio_buffer(
+        audio_arr,
+        sample_rate=req.sample_rate or 16000,
+        enable_energy_gate=req.enable_energy_gate if req.enable_energy_gate is not None else True,
+        energy_threshold_db=req.energy_threshold_db if req.energy_threshold_db is not None else -42.0
+    )
+    result["host_cpu_pct"] = round(psutil.cpu_percent(interval=None), 1)
     return result
 
 @app.post("/api/predict/audio")
@@ -77,6 +88,7 @@ async def predict_audio(file: UploadFile = File(...)):
         content = await file.read()
         result = engine.process_wav_bytes(content, filename=file.filename or "audio")
         result["filename"] = file.filename
+        result["host_cpu_pct"] = round(psutil.cpu_percent(interval=None), 1)
         return result
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Audio decoding error: {str(e)}")

@@ -1,0 +1,28 @@
+================================================================================
+PROXIMA_DATA_2_AGUMENTED SUMMARY REPORT
+================================================================================
+
+Source directory:            c:\Users\Dell\Desktop\KWS PROJECT\PROXIMA_DATA_2
+Source file count:           725
+Target directory:            c:\Users\Dell\Desktop\KWS PROJECT\PROXIMA_DATA_2_AGUMENTED
+Total augmented files:       3625
+Expansion multiplier:        5x (1 clean + 4 physical augmentations)
+
+--- Augmentation Modes ---
+  1. clean_original:  Direct bit-perfect standardized original
+  2. aug_shift:       Time shift (±100ms to ±200ms / ±1600-3200 samples)
+  3. aug_noise:       Additive Gaussian / ambient room noise (SNR 18-28 dB)
+  4. aug_gain:        Microphone gain / volume scaling (0.7x - 1.3x)
+  5. aug_comp:        Composite realistic acoustic environment
+
+--- Speaker & Class Distribution ---
+  SPK001   -> PROXIMA:  155 | UNKNOWN:  250 | TOTAL:  405
+  SPK002   -> PROXIMA:  200 | UNKNOWN: 1055 | TOTAL: 1255
+  SPK003   -> PROXIMA:  200 | UNKNOWN:    0 | TOTAL:  200
+  SPK005   -> PROXIMA:  500 | UNKNOWN:  200 | TOTAL:  700
+  SPK006   -> PROXIMA:  200 | UNKNOWN:  350 | TOTAL:  550
+  SPK008   -> PROXIMA:  200 | UNKNOWN:    0 | TOTAL:  200
+  SPK009   -> PROXIMA:  215 | UNKNOWN:    0 | TOTAL:  215
+  SPK011   -> PROXIMA:  100 | UNKNOWN:    0 | TOTAL:  100
+
+Overall PROXIMA: 1770 | UNKNOWN: 1855 | Total: 3625
