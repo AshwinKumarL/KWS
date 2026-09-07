@@ -1,0 +1,39 @@
+================================================================================
+PROXIMA KWS MODEL TEST SET EVALUATION REPORT (V2 - Anti-Overfitting Pipeline)
+================================================================================
+
+Evaluation on independent TEST partition (109 recordings).
+
+--- Anti-Overfitting Techniques Applied ---
+  - SpecAugment: Time masking (1-2 blocks, up to 20 frames)
+  - SpecAugment: Frequency masking (1-2 blocks, up to 5 bins)
+  - Waveform: Time shifting (+-0.2s), Gain variation (0.7-1.3x)
+  - Waveform: Gaussian noise injection (SNR 15-30 dB)
+  - Dropout: 0.4
+  - L2 Weight Decay: 0.001
+  - Label Smoothing: 0.1
+  - ReduceLROnPlateau (patience=15, factor=0.5)
+  - EarlyStopping (patience=30)
+
+--- INT8 TFLite Model (Hardware Deployment Target) ---
+  Test Accuracy:                99.08%
+  Precision (PROXIMA):          98.53%
+  Recall (PROXIMA):             100.00%
+  F1 Score:                     99.26%
+  PROXIMA False-Negative Rate:  0.00% (Missed keywords: 0 / 67)
+  UNKNOWN False-Positive Rate:  2.38% (False alarms: 1 / 42)
+
+  Confusion Matrix:
+                   Predicted UNKNOWN    Predicted PROXIMA
+  True UNKNOWN:            41                    1
+  True PROXIMA:             0                   67
+
+--- FLOAT32 Keras Model (Baseline) ---
+  Test Accuracy:                99.08%
+  Precision (PROXIMA):          98.53%
+  Recall (PROXIMA):             100.00%
+  F1 Score:                     99.26%
+
+--- Quantization Impact ---
+  Float32 -> INT8 Accuracy Delta: +0.00%
+  Float32 -> INT8 F1 Delta:       +0.00%
