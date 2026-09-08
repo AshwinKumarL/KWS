@@ -168,6 +168,7 @@ class ProximaKWSClient {
 
   bindEvents() {
     this.modelSelect.addEventListener('change', (e) => this.switchModel(e.target.value));
+    this.modelSelect.addEventListener('input', (e) => this.switchModel(e.target.value));
     this.refreshModelsBtn.addEventListener('click', () => this.fetchModels());
     
     // Live Listening
@@ -283,11 +284,16 @@ class ProximaKWSClient {
         const opt = document.createElement('option');
         opt.value = m.filename;
         opt.textContent = `${m.filename} (${m.size_kb} KB, ${m.quantization})`;
-        if (m.is_active) opt.selected = true;
+        if (m.filename === data.active_model) {
+          opt.selected = true;
+        }
         this.modelSelect.appendChild(opt);
       });
       
-      this.currentModelDisplay.textContent = data.active_model;
+      this.modelSelect.value = data.active_model;
+      if (this.currentModelDisplay) {
+        this.currentModelDisplay.textContent = data.active_model;
+      }
       await this.fetchModelInfo();
     } catch (err) {
       console.error('Failed to fetch models:', err);
@@ -304,7 +310,10 @@ class ProximaKWSClient {
       });
       const data = await res.json();
       if (data.status === 'success') {
-        this.currentModelDisplay.textContent = data.active_model;
+        this.modelSelect.value = data.active_model;
+        if (this.currentModelDisplay) {
+          this.currentModelDisplay.textContent = data.active_model;
+        }
         this.renderModelInfo(data.model_info);
         this.renderArchitecture(data.architecture);
       }
@@ -527,7 +536,8 @@ class ProximaKWSClient {
           samples: Array.from(orderedSamples),
           sample_rate: 16000,
           enable_energy_gate: this.energyGateEnabled,
-          energy_threshold_db: this.energyThresholdDb
+          energy_threshold_db: this.energyThresholdDb,
+          model_name: this.modelSelect ? this.modelSelect.value : undefined
         })
       });
       if (res.ok) {
@@ -566,6 +576,9 @@ class ProximaKWSClient {
     try {
       const formData = new FormData();
       formData.append('file', this.selectedUploadFile, this.selectedUploadFile.name);
+      if (this.modelSelect && this.modelSelect.value) {
+        formData.append('model_name', this.modelSelect.value);
+      }
 
       const res = await fetch('/api/predict/audio', {
         method: 'POST',
@@ -731,6 +744,9 @@ class ProximaKWSClient {
     try {
       const formData = new FormData();
       formData.append('file', this.recordedBlob, 'user_recording.wav');
+      if (this.modelSelect && this.modelSelect.value) {
+        formData.append('model_name', this.modelSelect.value);
+      }
 
       const res = await fetch('/api/predict/audio', {
         method: 'POST',
@@ -780,6 +796,9 @@ class ProximaKWSClient {
     try {
       const formData = new FormData();
       formData.append('sample_id', sampleId);
+      if (this.modelSelect && this.modelSelect.value) {
+        formData.append('model_name', this.modelSelect.value);
+      }
 
       const res = await fetch('/api/predict/sample', {
         method: 'POST',
